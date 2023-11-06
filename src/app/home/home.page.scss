@@ -25,3 +25,17 @@
 #container a {
   text-decoration: none;
 }
+
+/* En tu archivo de estilos (por ejemplo, styles.scss) */
+@keyframes rotar {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotar-elemento {
+  animation: rotar 2s linear infinite;
+}

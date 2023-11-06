@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -27,6 +27,14 @@ const routes: Routes = [
     path: '**',
     redirectTo: '/not-found',
     pathMatch: 'full'
+  },
+  {
+    path: 'visas',
+    loadChildren: () => import('./pages/visas/visas.module').then( m => m.VisasPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   }
 ];
 

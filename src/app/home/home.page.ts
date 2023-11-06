@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  userEmail: string = '';
+  constructor() {
+    this.userEmail = localStorage.getItem('email') || ''; 
+  }
 
-  constructor() {}
+  
 
 }

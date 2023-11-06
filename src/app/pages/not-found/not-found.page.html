@@ -4,14 +4,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <div class="container">
-    <div class="track">
-      <ion-card id="card" button="true">
-        <ion-card-content>Card</ion-card-content>
-      </ion-card>
-    </div>
-  
-    <p>Drag the square along the track.</p>
+<ion-content>
+  <div class="not-found-container">
+    <h1>Página no encontrada</h1>
+    <p>Lo sentimos, la página a la que intentas acceder no existe.</p>
+    <ion-button (click)="redirectToHome()" expand="full">Ir al inicio</ion-button>
   </div>
 </ion-content>
+
