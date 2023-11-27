@@ -50,6 +50,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/apirest/apirest.module').then( m => m.ApirestPageModule)
   },
   {
+    path: 'camara',
+    loadChildren: () => import('./pages/camara/camara.module').then( m => m.CamaraPageModule)
+  },
+  {
     path: '**',
     redirectTo: '/not-found',
     pathMatch: 'full'

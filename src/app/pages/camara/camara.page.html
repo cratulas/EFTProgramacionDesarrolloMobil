@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Cámara
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="takePicture()">Tomar foto</ion-button>
+
+  <!-- Mostrar la imagen si está disponible -->
+  <ion-img *ngIf="imageSource" [src]="imageSource" alt="Imagen capturada"></ion-img>
+</ion-content>
