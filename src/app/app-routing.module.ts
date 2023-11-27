@@ -23,11 +23,7 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
-  {
-    path: '**',
-    redirectTo: '/not-found',
-    pathMatch: 'full'
-  },
+
   {
     path: 'visas',
     loadChildren: () => import('./pages/visas/visas.module').then( m => m.VisasPageModule)
@@ -35,7 +31,24 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
-  }
+  },
+  {
+    path: 'listar',
+    loadChildren: () => import('./pages/listar/listar.module').then( m => m.ListarPageModule)
+  },
+  {
+    path: 'agregar',
+    loadChildren: () => import('./pages/agregar/agregar.module').then( m => m.AgregarPageModule)
+  },
+  {
+    path: '**',
+    redirectTo: '/not-found',
+    pathMatch: 'full'
+  },
+  {
+    path: 'modificar',
+    loadChildren: () => import('./pages/modificar/modificar.module').then( m => m.ModificarPageModule)
+  },
 ];
 
 @NgModule({
