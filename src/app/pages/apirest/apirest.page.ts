@@ -12,7 +12,7 @@ export class ApirestPage implements OnInit {
   constructor(private apiClient: ApiClientService) { }
 
   ngOnInit() {
-    this.apiClient.getTodos().subscribe((data: any) => {
+    this.apiClient.getTodos().then((data: any[]) => {
       this.todosList = data;
     });
   }
