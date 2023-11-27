@@ -15,7 +15,6 @@ export class ApiClientService {
       .toPromise()
       .then((data: any[] | undefined) => {
         if (data) {
-          // Si se obtienen datos, guardarlos en la base de datos
           this.sqliteService.saveTodos(data);
           return data;
         } else {
@@ -23,7 +22,6 @@ export class ApiClientService {
         }
       })
       .catch(async (error: any) => {
-        // En caso de error al obtener datos, obtener datos almacenados en la base de datos
         return await this.sqliteService.getStoredTodos();
       });
   }
