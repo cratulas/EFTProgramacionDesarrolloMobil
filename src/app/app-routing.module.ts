@@ -40,15 +40,20 @@ const routes: Routes = [
     path: 'agregar',
     loadChildren: () => import('./pages/agregar/agregar.module').then( m => m.AgregarPageModule)
   },
-  {
-    path: '**',
-    redirectTo: '/not-found',
-    pathMatch: 'full'
-  },
+
   {
     path: 'modificar',
     loadChildren: () => import('./pages/modificar/modificar.module').then( m => m.ModificarPageModule)
   },
+  {
+    path: 'apirest',
+    loadChildren: () => import('./pages/apirest/apirest.module').then( m => m.ApirestPageModule)
+  },
+  {
+    path: '**',
+    redirectTo: '/not-found',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
