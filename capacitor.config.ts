@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'Sumativa1.1Blank',
+  appName: 'GoAndGo',
   webDir: 'www',
   server: {
     androidScheme: 'https'

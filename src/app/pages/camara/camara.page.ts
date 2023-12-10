@@ -7,7 +7,7 @@ import { Camera, CameraResultType } from '@capacitor/camera';
   styleUrls: ['./camara.page.scss'],
 })
 export class CamaraPage implements OnInit {
-  imageSource: any;
+  imageSource: any = null;
   constructor() { }
 
   ngOnInit() {

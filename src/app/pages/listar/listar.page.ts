@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { ServiceDBService } from 'src/app/services/service-db.service';
 
+
 @Component({
   selector: 'app-listar',
   templateUrl: './listar.page.html',
