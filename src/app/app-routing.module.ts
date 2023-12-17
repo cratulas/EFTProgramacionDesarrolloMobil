@@ -23,11 +23,6 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
-
-  {
-    path: 'visas',
-    loadChildren: () => import('./pages/visas/visas.module').then( m => m.VisasPageModule)
-  },
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
@@ -54,10 +49,20 @@ const routes: Routes = [
     loadChildren: () => import('./pages/camara/camara.module').then( m => m.CamaraPageModule)
   },
   {
+    path: 'visa-info',
+    loadChildren: () => import('./pages/visa-info/visa-info.module').then( m => m.VisaInfoPageModule)
+  },
+  {
+    path: 'destino',
+    loadChildren: () => import('./pages/destino/destino.module').then( m => m.DestinoPageModule)
+  },
+  {
     path: '**',
     redirectTo: '/not-found',
     pathMatch: 'full'
-  }
+  },
+
+
 ];
 
 @NgModule({

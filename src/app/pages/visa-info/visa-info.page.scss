@@ -1,0 +1,45 @@
+.visa-info-container {
+    ion-card-content {
+      p {
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: #555;
+      }
+  
+      ion-list {
+        ion-list-header {
+          ion-label {
+            font-weight: bold;
+            color: #333;
+          }
+        }
+  
+        ion-item {
+          --inner-padding-start: 16px;
+          --inner-padding-end: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          border-bottom: 1px solid #eee;
+  
+          ion-label {
+            font-size: 14px;
+            color: #333;
+          }
+  
+          ion-icon {
+            font-size: 18px;
+            color: #888;
+          }
+  
+          &:last-child {
+            border-bottom: none;
+          }
+  
+          &:hover {
+            --background: #f9f9f9;
+          }
+        }
+      }
+    }
+  }
+  

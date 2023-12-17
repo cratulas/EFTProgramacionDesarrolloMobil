@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { VisasPageRoutingModule } from './visas-routing.module';
+import { VisaInfoPageRoutingModule } from './visa-info-routing.module';
 
-import { VisasPage } from './visas.page';
+import { VisaInfoPage } from './visa-info.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VisasPageRoutingModule
+    VisaInfoPageRoutingModule
   ],
-  declarations: [VisasPage]
+  declarations: [VisaInfoPage]
 })
-export class VisasPageModule {}
+export class VisaInfoPageModule {}

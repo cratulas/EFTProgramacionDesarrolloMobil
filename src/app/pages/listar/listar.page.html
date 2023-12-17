@@ -1,51 +1,36 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Visas</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h2 class="ion-text-center">Listado de visas</h2>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">listar</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-searchbar placeholder="Buscar visa" animated></ion-searchbar>
 
-  <h2 class="ion-text-center"> Listado de visas</h2>
-  <ion-searchbar placeholder="Buscar visa"></ion-searchbar>
   <ion-list>
-
-    <ion-item-sliding *ngFor="let x of arregloVisas">
-      <ion-item>
+    <ion-item-sliding *ngFor="let visa of arregloVisas">
+      <ion-item lines="full">
         <ion-label>
-          <h2>{{x.pais}}</h2>
-          <p style="word-wrap: break-word;white-space: normal;">{{x.det}}</p>
+          <h2>{{ visa.pais }}</h2>
+          <p class="description">{{ visa.det }}</p>
         </ion-label>
       </ion-item>
 
-      <ion-item-options>
-        <ion-item-option (click)="modificar(x)">
-          <ion-icon slot="bottom" name="pencil-sharp"></ion-icon>
-          Modificar
+      <ion-item-options side="end">
+        <ion-item-option color="primary" (click)="modificar(visa)">
+          <ion-icon slot="icon-only" name="create-outline"></ion-icon>
         </ion-item-option>
-        <ion-item-option color="danger" (click)="eliminar(x)">
-          <ion-icon slot="bottom" name="pencil-sharp"></ion-icon>
-          Eliminar
+        <ion-item-option color="danger" (click)="eliminar(visa)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
         </ion-item-option>
       </ion-item-options>
-
-    </ion-item-sliding>  
+    </ion-item-sliding>
   </ion-list>
 
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button [routerLink]="['/agregar']">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
 </ion-content>
-
-
-

@@ -19,12 +19,11 @@
   <ion-card>
     <ion-img src="https://elcomercio.pe/resizer/NfIXC8KgNwdqkulurMNpBqvO9YM=/1200x675/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/DXHE5D5ZMZAMNCBWJZHHQAB434.jpg" alt="Nombre Destino"></ion-img>
     <ion-card-header>
-      <ion-card-title>Nombre Destino</ion-card-title>
-      <ion-card-subtitle>Descripción corta del destino</ion-card-subtitle>
+      <ion-card-title>Hobbiton™ Movie Set Tours</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>Detalles adicionales sobre el destino.</p>
-      <ion-button>Ver más</ion-button> 
+      <p>Experience the real Middle-earth™ at the Hobbiton™ Movie Set, where, in the heart of the Waikato region, you can step into the lush pastures of the Shire™, as seen in The Lord of the Rings and The Hobbit trilogies</p>
+      <ion-button [routerLink]="['/destino']"> Ver más</ion-button>
     </ion-card-content>
   </ion-card>
 
@@ -38,6 +37,7 @@
     </ion-card-header>
     <ion-card-content>
       <p>Detalles adicionales sobre la oferta especial.</p>
+      <ion-button expand="block" (click)="irAPaginaVisa()">Ir a Información de Visa</ion-button>
       <ion-button [routerLink]="['/agregar']"> Ir a agregar visas</ion-button>
       <ion-button [routerLink]="['/apirest']">Ir a API REST</ion-button>
       <ion-button [routerLink]="['/camara']">Ir a la cámara</ion-button>
@@ -51,7 +51,7 @@
     <ion-item>Guias locales <ion-icon name="logo-twitter" class="rotar-elemento"></ion-icon></ion-item>
     <ion-item>Donde comer <ion-icon name="logo-twitter" class="rotar-elemento"></ion-icon></ion-item>
     <ion-item>Recomendaciones  <ion-icon name="logo-twitter" class="rotar-elemento"></ion-icon></ion-item>
-    <!-- Agrega más categorías aquí -->
+
   </ion-list>
 
 </ion-content>
